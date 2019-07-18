@@ -10,7 +10,7 @@ steps:
     PASSWORD:
       from_secret: megapassword
   commands:
-  - echo $(USERNAME)
+  - echo ${USERNAME}
   - apt-get update
   - apt-get install sudo make git megatools -y
   - git clone git://github.com/akhilnarang/scripts
@@ -28,3 +28,4 @@ steps:
   - lunch aosp_hero2lte-userdebug && mka bacon -j$(nproc --all)
   - megatools put ~/pixelexperience/out/target/product/hero2lte/PixelExperience_hero2lte*.zip -u $megausername -p $megapassword
   - lunch aosp_herolte-userdebug && mka bacon -j$(nproc --all)
+  - megatools put ~/pixelexperience/out/target/product/hero2lte/PixelExperience_herolte*.zip -u $megausername -p $megapassword
