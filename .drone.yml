@@ -4,8 +4,13 @@ name: Dronerino
 steps:
 - name: build
   image: ubuntu:bionic
+  environment:
+    USERNAME:
+      from_secret: megausername
+    PASSWORD:
+      from_secret: megapassword
   commands:
-  - echo $(megausername)
+  - echo $(USERNAME)
   - apt-get update
   - apt-get install sudo make git megatools -y
   - git clone git://github.com/akhilnarang/scripts
