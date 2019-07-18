@@ -3,8 +3,9 @@ name: Dronerino
 
 steps:
 - name: build
-  image: alebabai/lineageos-docker
+  image: ubuntu:bionic
   commands:
+  - apt-get install git
   - git clone git://github.com/akhilnarang/scripts
   - cd scripts
   - bash setup/android_build_env.sh
