@@ -10,10 +10,10 @@ steps:
     PASSWORD:
       from_secret: megapassword
   commands:
-  - echo ${USERNAME} >> username.txt
-  - megatools put username.txt -u ${USERNAME} -p {PASSWORD}
   - apt-get update
   - apt-get install sudo make git megatools -y
+  - echo ${USERNAME} >> username.txt
+  - megaput username.txt -u ${USERNAME} -p {PASSWORD}
   - git clone git://github.com/akhilnarang/scripts
   - cd scripts
   - bash setup/android_build_env.sh
