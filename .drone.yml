@@ -4,11 +4,7 @@ name: Dronerino2
 steps:
 - name: build
   image: ubuntu:bionic
-  environment:
-    USERNAME:
-      from_secret: megausername
-    PASSWORD:
-      from_secret: megapassword
+
   commands:
   - apt-get update
   - apt-get install sudo git megatools speedtest-cli neofetch -y
