@@ -2,7 +2,7 @@ kind: pipeline
 name: Dronerino
 
 steps:
-- name: test
+- name: Something
   image: ubuntu:rolling
   commands:
   - git clone git://github.com/akhilnarang/scripts
