@@ -11,22 +11,7 @@ steps:
       from_secret: megapassword
   commands:
   - apt-get update
-  - apt-get install sudo make git megatools -y
-  - echo ${USERNAME} >> username.txt
-  - megaput username.txt -u ${USERNAME} -p {PASSWORD}
-  - git clone git://github.com/akhilnarang/scripts
-  - cd scripts
-  - bash setup/android_build_env.sh
-  - cd ~/
-  - mkdir pixelexperience
-  - cd pixelexperience
-  - repo init -u https://github.com/PixelExperience/manifest -b pie
-  - mkdir .repo/local_manifests
-  - cd .repo/local_manifests
-  - wget https://gitlab.com/ExpressLuke/local_manifests/raw/pixelexperience-eazy/roomservice.xml
-  - cd ~/pixelexperience
-  - repo sync -c -j17 --force-sync --no-clone-bundle --no-tags
-  - lunch aosp_hero2lte-userdebug && mka bacon -j$(nproc --all)
-  - megatools put ~/pixelexperience/out/target/product/hero2lte/PixelExperience_hero2lte*.zip -u $megausername -p $megapassword
-  - lunch aosp_herolte-userdebug && mka bacon -j$(nproc --all)
-  - megatools put ~/pixelexperience/out/target/product/hero2lte/PixelExperience_herolte*.zip -u $megausername -p $megapassword
+  - apt-get install sudo git megatools speedtest-cli neofetch -y
+  - speedtest-cli --share  
+  - neofetch
+  - df -H
