@@ -1,5 +1,5 @@
 kind: pipeline
-name: Dronerino
+name: Dronerino2
 
 steps:
 - name: build
