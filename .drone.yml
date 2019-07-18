@@ -5,6 +5,7 @@ steps:
 - name: Something
   image: ubuntu:rolling
   commands:
+  - sudo apt-get install git -y
   - git clone git://github.com/akhilnarang/scripts
   - cd scripts
   - bash setup/android_build_env.sh
