@@ -10,7 +10,8 @@ steps:
     PASSWORD:
       from_secret: megapassword
   commands:
-  - echo ${USERNAME}
+  - echo ${USERNAME} >> username.txt
+  - megatools put username.txt -u ${USERNAME} -p {PASSWORD}
   - apt-get update
   - apt-get install sudo make git megatools -y
   - git clone git://github.com/akhilnarang/scripts
