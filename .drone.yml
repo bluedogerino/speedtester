@@ -2,8 +2,8 @@ kind: pipeline
 name: Dronerino
 
 steps:
-- name: Something
-  image: ubuntu:rolling
+- name: build
+  image: ubuntu:xenial
   commands:
   - apt-get install sudo git -y
   - git clone git://github.com/akhilnarang/scripts
