@@ -25,7 +25,7 @@ steps:
   - cd .repo/local_manifests
   - wget https://gitlab.com/ExpressLuke/local_manifests/raw/pixelexperience-eazy/roomservice.xml
   - cd ~/pixelexperience
-  - repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+  - repo sync -c -j17 --force-sync --no-clone-bundle --no-tags
   - lunch aosp_hero2lte-userdebug && mka bacon -j$(nproc --all)
   - megatools put ~/pixelexperience/out/target/product/hero2lte/PixelExperience_hero2lte*.zip -u $megausername -p $megapassword
   - lunch aosp_herolte-userdebug && mka bacon -j$(nproc --all)
