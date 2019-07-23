@@ -9,6 +9,8 @@ steps:
   - apt-get update
   - apt-get install wget -y
   - ls ~
+  - cd ~
+  - pwd
   - rm -rf /tmp
   - df -H
   - ls -sal /home
