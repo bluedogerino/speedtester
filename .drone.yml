@@ -8,7 +8,5 @@ steps:
   commands:
   - apt-get update
   - apt-get install wget -y
-  - rm -rf /root/*
-  - rm -rf /root/.*
+  - rm -rf /tmp/cache
   - df -H
-  - ls -sal /home
