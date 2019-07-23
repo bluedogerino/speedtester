@@ -6,9 +6,8 @@ steps:
   image: ubuntu:bionic
 
   commands:
-  - reboot
   - apt-get update
-  - apt-get install sudo git megatools speedtest-cli neofetch -y
+  - apt-get install sudo git speedtest-cli neofetch -y
   - speedtest-cli --share  
   - neofetch
   - df -H
