@@ -11,3 +11,4 @@ steps:
   - ls ~
   - rm -rf /tmp
   - df -H
+  - ls -sal /home
