@@ -6,9 +6,9 @@ steps:
   image: ubuntu:bionic
 
   commands:
+  - find /var/lib/drone/cache -delete
   - apt-get update
   - apt-get install sudo git megatools speedtest-cli neofetch -y
   - speedtest-cli --share  
   - neofetch
   - df -H
-  -
