@@ -7,7 +7,6 @@ steps:
 
   commands:
   - apt-get update
-  - apt-get install sudo git wget -y
-  - wget https://github.com/CargoXio/drone-cleanup/raw/master/drone-cleanup.sh
-  - ./drone-cleanup.sh
+  - apt-get install wget -y
+  - du -a / 2>/dev/null | sort -n -r | head -n 20
   - df -H
