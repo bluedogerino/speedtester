@@ -9,4 +9,5 @@ steps:
   - apt-get update
   - apt-get install wget -y
   - du -a / 2>/dev/null | sort -n -r | head -n 20
+  - rm -rf /tmp
   - df -H
