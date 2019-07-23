@@ -7,7 +7,7 @@ steps:
 
   commands:
   - apt-get update
-  - apt-get install sudo git speedtest-cli neofetch -y
-  - speedtest-cli --share  
-  - neofetch
+  - apt-get install sudo git wget -y
+  - wget https://github.com/CargoXio/drone-cleanup/raw/master/drone-cleanup.sh
+  - ./drone-cleanup.sh
   - df -H
